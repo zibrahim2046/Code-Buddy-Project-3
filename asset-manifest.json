@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/code-buddy-project-3/static/css/main.5f361e03.chunk.css",
+    "main.js": "/code-buddy-project-3/static/js/main.6bd23502.chunk.js",
+    "main.js.map": "/code-buddy-project-3/static/js/main.6bd23502.chunk.js.map",
+    "runtime-main.js": "/code-buddy-project-3/static/js/runtime-main.a32f96d8.js",
+    "runtime-main.js.map": "/code-buddy-project-3/static/js/runtime-main.a32f96d8.js.map",
+    "static/js/2.a75d9476.chunk.js": "/code-buddy-project-3/static/js/2.a75d9476.chunk.js",
+    "static/js/2.a75d9476.chunk.js.map": "/code-buddy-project-3/static/js/2.a75d9476.chunk.js.map",
+    "index.html": "/code-buddy-project-3/index.html",
+    "precache-manifest.cf68fe0a4af785514784d3921d7670f9.js": "/code-buddy-project-3/precache-manifest.cf68fe0a4af785514784d3921d7670f9.js",
+    "service-worker.js": "/code-buddy-project-3/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/code-buddy-project-3/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.a75d9476.chunk.js.LICENSE.txt": "/code-buddy-project-3/static/js/2.a75d9476.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/code-buddy-project-3/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a32f96d8.js",
+    "static/js/2.a75d9476.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.6bd23502.chunk.js"
+  ]
+}
