@@ -1,20 +1,28 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
+import './App.css';
 
-class App extends Component {
+//Pages
+import MainPage from './pages';
+import NotFound from './pages/404';
+import HelpPage from './pages/helpPage';
+import LoadingPage from './pages/loadingPage';
+import Results from './pages/results';
+
+class App extends React.Component {
   render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+      return (
+          <Router>
+              <Switch>
+                  <Route exact path='/' component={MainPage} />
+                  <Route exact path='/help' component={HelpPage} />
+                  <Route exact path='/load' component={LoadingPage} />
+                  <Route exact path='/results' component={Results} />
+                  <Route exact path='/404' component={NotFound} />
+                  <Redirect to='/404' />
+              </Switch>
+          </Router>
+      );
   }
 }
 
