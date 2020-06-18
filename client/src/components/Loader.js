@@ -2,6 +2,7 @@ import React from 'react';
 // import logo from '../assets/images/spinner.gif';
 import styled from 'styled-components';
 import { Spinner } from 'reactstrap';
+import Quotes from '../components/Quotes'
 
 const Container = styled.div`
     height: 100%;
@@ -16,10 +17,15 @@ const Heading = styled.h1`
     text-align: center;
 `;
 
+
+
+
+
 const Loader = () => (
     <Container>
         <Heading>okay! let me see what i can find...</Heading>
         <Spinner style={{ width: '3rem', height: '3rem' }} />{' '}
+        <Quotes />
     </Container>
 );
 
