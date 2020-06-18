@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import NavBar from '../components/NavBar';
 
 const Container = styled.main`
     height: 100vh;
@@ -24,8 +25,11 @@ const Content = styled.div`
 `;
 
 const Layout = ({ children }) => (
-    <Container>
-        <Content>{children}</Content>
-    </Container>
+    <>
+        <NavBar />
+        <Container>
+            <Content>{children}</Content>
+        </Container>
+    </>
 );
 export default Layout;

@@ -1,22 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-// import Loader from '../components/Loader';
+import styled from 'styled-components';
+
+const NewUser = styled.a`
+    margin-top: 100px;
+`;
 
 const MainPage = () => {
-    // const [loading, setLoading] = useState(true);
-
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         setLoading(false);
-    //     }, 2000);
-    // }, []);
-
     return (
         <div className='App'>
-            {/* {loading ? ( */}
-            {/* // <Loader /> */}
-            {/* // ) : ( */}
-
             <h1>welcome to code buddy</h1>
             <p>please sign in to continue</p>
             <Form inline>
@@ -34,8 +26,7 @@ const MainPage = () => {
                 </FormGroup>
                 <Button>Submit</Button>
             </Form>
-
-            {/* // )} */}
+            <NewUser href=''>new user?</NewUser>
         </div>
     );
 };
