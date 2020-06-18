@@ -3,8 +3,8 @@ import React from 'react';
 import { UncontrolledButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 const HelpPage = () => {
-    const [dropdownOpen, setOpen] = React.useState(false);
-    const toggle = () => setOpen(!dropdownOpen);
+    // const [dropdownOpen, setOpen] = React.useState(false);
+    // const toggle = () => setOpen(!dropdownOpen);
     return (
         <div>
             <h1>hello, User! my name is Code Buddy, what can I help you with?</h1>
