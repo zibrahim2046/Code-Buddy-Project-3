@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import styled from 'styled-components';
-
-const NewUser = styled.a`
-    margin-top: 100px;
-`;
+import Authentication from '../components/Authentication';
 
 const MainPage = () => {
     return (
@@ -26,7 +23,7 @@ const MainPage = () => {
                 </FormGroup>
                 <Button>Submit</Button>
             </Form>
-            <NewUser href=''>new user?</NewUser>
+            <Authentication buttonLabel='NEW USER?' style={{ marginTop: 100 }} />
         </div>
     );
 };
