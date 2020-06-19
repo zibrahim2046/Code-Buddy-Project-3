@@ -14,15 +14,11 @@ const HelpPage = () => {
                     <DropdownItem>Action</DropdownItem>
                     <DropdownItem>Action</DropdownItem>
                     <DropdownItem>Action</DropdownItem>
-                    <DropdownItem>Action</DropdownItem>
-                    <DropdownItem>Action</DropdownItem>
                 </DropdownMenu>
             </UncontrolledButtonDropdown>
             <UncontrolledButtonDropdown>
                 <DropdownToggle caret>CSS</DropdownToggle>
                 <DropdownMenu>
-                    <DropdownItem>Action</DropdownItem>
-                    <DropdownItem>Action</DropdownItem>
                     <DropdownItem>Action</DropdownItem>
                     <DropdownItem>Action</DropdownItem>
                     <DropdownItem>Action</DropdownItem>
@@ -34,15 +30,11 @@ const HelpPage = () => {
                     <DropdownItem>Action</DropdownItem>
                     <DropdownItem>Action</DropdownItem>
                     <DropdownItem>Action</DropdownItem>
-                    <DropdownItem>Action</DropdownItem>
-                    <DropdownItem>Action</DropdownItem>
                 </DropdownMenu>
             </UncontrolledButtonDropdown>
             <UncontrolledButtonDropdown>
                 <DropdownToggle caret>React</DropdownToggle>
                 <DropdownMenu>
-                    <DropdownItem>Action</DropdownItem>
-                    <DropdownItem>Action</DropdownItem>
                     <DropdownItem>Action</DropdownItem>
                     <DropdownItem>Action</DropdownItem>
                     <DropdownItem>Action</DropdownItem>

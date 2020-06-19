@@ -18,16 +18,22 @@ const NavBar = (props) => {
             <Navbar color='faded' light>
                 <NavbarToggler onClick={toggleNavbar} className='mr-2' />
                 <NavbarBrand href='/' className='mr-auto'>
-                    reactstrap
+                    code buddy
                 </NavbarBrand>
 
                 <Collapse isOpen={!collapsed} navbar>
                     <Nav navbar>
                         <NavItem>
-                            <NavLink href='/components/'>Components</NavLink>
+                            <NavLink href='/'>login</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href='https://github.com/reactstrap/reactstrap'>GitHub</NavLink>
+                            <NavLink href='/help'>home</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href='/results'>content</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href=''>github</NavLink>
                         </NavItem>
                     </Nav>
                 </Collapse>

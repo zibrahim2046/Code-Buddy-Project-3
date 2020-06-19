@@ -21,9 +21,9 @@ const MainPage = () => {
                     </Label>
                     <Input type='password' name='password' id='password' placeholder='' />
                 </FormGroup>
-                <Button>Submit</Button>
+                <Button>submit</Button>
             </Form>
-            <Authentication buttonLabel='NEW USER?' style={{ marginTop: 100 }} />
+            <Authentication buttonLabel='new user?' style={{ marginTop: 100 }} />
         </div>
     );
 };
