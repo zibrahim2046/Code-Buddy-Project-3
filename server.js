@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/code-buddy");
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://cshanebrown78:<password>@cluster0-vggoa.mongodb.net/codeBuddy?retryWrites=true&w=majority");
 
 // Send every request to the React app
 // Define any API routes before this runs
