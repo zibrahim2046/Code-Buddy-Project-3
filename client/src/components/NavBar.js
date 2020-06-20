@@ -17,23 +17,23 @@ const NavBar = (props) => {
         <NavContainer>
             <Navbar color='faded' light>
                 <NavbarToggler onClick={toggleNavbar} className='mr-2' />
-                <NavbarBrand href='/' className='mr-auto'>
-                    code buddy
+                <NavbarBrand href='' className='mr-auto'>
+                    Code Buddy
                 </NavbarBrand>
 
                 <Collapse isOpen={!collapsed} navbar>
                     <Nav navbar>
                         <NavItem>
-                            <NavLink href='/'>login</NavLink>
+                            <NavLink href='/'>Login</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href='/help'>home</NavLink>
+                            <NavLink href='/help'>Home</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href='/results'>content</NavLink>
+                            <NavLink href='/results'>Content</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href=''>github</NavLink>
+                            <NavLink href='https://github.com/zibrahim2046/Code-Buddy-Project-3'>Github</NavLink>
                         </NavItem>
                     </Nav>
                 </Collapse>

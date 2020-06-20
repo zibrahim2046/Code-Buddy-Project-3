@@ -6,24 +6,24 @@ import Authentication from '../components/Authentication';
 const MainPage = () => {
     return (
         <div className='App'>
-            <h1>welcome to code buddy</h1>
-            <p>please sign in to continue</p>
+            <h1>Welcome To Code Buddy</h1>
+            <p>Please Sign In To Continue</p>
             <Form inline>
                 <FormGroup className='mb-2 mr-sm-2 mb-sm-0'>
                     <Label for='exampleEmail' className='mr-sm-2'>
-                        username
+                        Username
                     </Label>
                     <Input type='username' name='username' id='username' placeholder='' />
                 </FormGroup>
                 <FormGroup className='mb-2 mr-sm-2 mb-sm-0'>
                     <Label for='password' className='mr-sm-2'>
-                        password
+                        Password
                     </Label>
                     <Input type='password' name='password' id='password' placeholder='' />
                 </FormGroup>
-                <Button>submit</Button>
+                <Button>Submit</Button>
             </Form>
-            <Authentication buttonLabel='new user?' style={{ marginTop: 100 }} />
+            <Authentication buttonLabel='New User?' style={{ marginTop: 100 }} />
         </div>
     );
 };

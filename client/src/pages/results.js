@@ -15,7 +15,7 @@ class Video extends React.Component {
             },
         };
 
-        return <YouTube videoId='2g811Eo7K8U' opts={opts} onReady={this._onReady} />;
+        return <YouTube videoId='sBws8MSXN7A' opts={opts} onReady={this._onReady} />;
     }
 
     _onReady(event) {
@@ -23,6 +23,7 @@ class Video extends React.Component {
         event.target.pauseVideo();
     }
 }
+
 const Results = () => {
     const [loading, setLoading] = useState(true);
 
@@ -38,14 +39,20 @@ const Results = () => {
                 <Loader />
             ) : (
                 <>
-                    <h1>User, here's what i found</h1>
+                    <h1>User, here's what I found</h1>
                     <p>
                         <Video />
                     </p>
-                    <h2>was this helpful?</h2>
-                    <Button color='primary'>yes, thank you Code Buddy!</Button>{' '}
-                    <Button color='secondary'>no, not quite...</Button>{' '}
-                    <Button color='success'>let's start over</Button>
+                    <h2>Was this helpful?</h2>
+                    <Button style={{ marginRight: 50 }} color='secondary'>
+                        Yes!
+                    </Button>{' '}
+                    <Button style={{ marginRight: 50 }} color='secondary'>
+                        No, not quite...
+                    </Button>{' '}
+                    <Button style={{ marginRight: 50 }} color='secondary'>
+                        Let's start over
+                    </Button>
                 </>
             )}
         </div>

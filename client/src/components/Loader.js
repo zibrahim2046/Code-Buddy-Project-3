@@ -18,7 +18,7 @@ const Heading = styled.h1`
 
 const Loader = () => (
     <Container>
-        <Heading>okay! let me see what i can find...</Heading>
+        <Heading>Okay! Let me see what I can find...</Heading>
         <Spinner style={{ width: '3rem', height: '3rem' }} />
     </Container>
 );
