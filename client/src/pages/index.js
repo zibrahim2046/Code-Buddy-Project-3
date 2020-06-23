@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import styled from 'styled-components';
+import Authentication from '../components/Authentication';
 
 const MainPage = () => {
     return (
@@ -19,8 +21,9 @@ const MainPage = () => {
                     </Label>
                     <Input type='password' name='password' id='password' placeholder='' />
                 </FormGroup>
-                <Button>Submit</Button>
+                <Button>submit</Button>
             </Form>
+            <Authentication buttonLabel='new user?' style={{ marginTop: 100 }} />
         </div>
     );
 };
