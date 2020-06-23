@@ -22,7 +22,7 @@ const quotes = [
     },
     {
         id: 6,
-        quote: '"Whether You Think You Can Or Think You Can’t, You’re Right.; – Quote By Henry Ford',
+        quote: '"Whether You Think You Can Or Think You Can’t, You’re Right." – Quote By Henry Ford',
     },
     {
         id: 7,

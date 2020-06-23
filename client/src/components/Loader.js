@@ -17,8 +17,8 @@ const Heading = styled.h1`
 
 const Loader = () => (
     <Container>
-        <Heading>Okay! Let me see what I can find...</Heading>
-        <Spinner style={{ width: '3rem', height: '3rem' }} />
+        <Heading style={{ marginTop: '75px' }}>Okay! Let me see what I can find...</Heading>
+        <Spinner style={{ marginTop: '75px', width: '6rem', height: '6rem' }} />
         <GetRandomQuote style={{ marginTop: '200px' }} />
     </Container>
 );
