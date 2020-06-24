@@ -40,7 +40,7 @@ const Results = () => {
             ) : (
                 <>
                     <p>
-                        <h2>Here are some useful resources, Happy Coding!</h2>
+                        <h3>Here are some useful resources, Happy Coding!</h3>
                         {/* <Video /> */}
                         <ResultsCarousel />
                     </p>

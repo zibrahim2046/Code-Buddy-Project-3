@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from 'reactstrap';
-
+import Video from '../components/VideoPlayer';
 const items = [
     {
         id: 1,
@@ -50,6 +50,9 @@ const ResultsCarousel = (props) => {
                 onExited={() => setAnimating(false)}
             >
                 <CarouselCaption className='text-secondary' captionText={item.caption} captionHeader={item.caption} />
+                <div>
+                    <Video />
+                </div>
             </CarouselItem>
         );
     });
