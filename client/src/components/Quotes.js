@@ -1,20 +1,21 @@
-// import React from 'react';
-// import * as Quotes from '../quotes.json';
+import React from 'react';
+import quotes from '../assets/quotes.js';
 
-//     React.render (){}
-//     getRandomQuote () {
-//       let keys = Object.keys(Quotes)
-//       return Quotes[keys[keys.length * Math.random() << 0]];
-//     }
-//     render () {
-//         return (
-//             <div>
-//                 <div className="PageContainer">
-//                     <h1>Welcome</h1>
-//                     <div id="quotes">Here is a quote for you:<p id="quote_text">{this.getRandomQuote()}</p></div>
-//                 </div>
-//             </div>
-//         );
-//     }
+const getQuote = () => {
+    let keys = Object.keys(quotes);
+    const { quote } = quotes[keys[(keys.length * Math.random()) << 0]];
 
-// export default Quotes;
+    return quote;
+};
+
+const GetRandomQuote = ({ style }) => {
+    return (
+        <section style={style} className='quotes'>
+            <div id='quotes'>
+                <p> {getQuote()}</p>
+            </div>
+        </section>
+    );
+};
+
+export default GetRandomQuote;
