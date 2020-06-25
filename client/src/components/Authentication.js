@@ -13,16 +13,16 @@ const Authentication = ({ buttonLabel, className, style }) => {
                 {buttonLabel}
             </Button>
             <Modal isOpen={modal} toggle={toggle} className={className}>
-                <ModalHeader toggle={toggle}>create an account</ModalHeader>
+                <ModalHeader toggle={toggle}>Create An Account</ModalHeader>
                 <ModalBody>
                     <InputForm />
                 </ModalBody>
                 <ModalFooter>
                     <Button color='primary' onClick={toggle}>
-                        submit
+                        Submit
                     </Button>{' '}
                     <Button color='secondary' onClick={toggle}>
-                        cancel
+                        Cancel
                     </Button>
                 </ModalFooter>
             </Modal>
