@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Video from '../components/VideoPlayer';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import SaveBtn from '../components/SaveBtn';
 
 // const Carousel = styled.div`
 //     height: 100%;
@@ -17,27 +18,28 @@ const ResultsCarousel = () => {
                 <Video />
                 {/* <img src='assets/1.jpeg' /> */}
                 <p>
-                    <button id='save' style={{ marginBottom: 50 }} onclick='myFunction()'>
+                    <SaveBtn />
+                    {/* <button id='save' style={{ marginBottom: 50 }} onclick='myFunction()'>
                         Save
-                    </button>
+                    </button> */}
                 </p>
             </div>
             <div>
-                {/* <img src='assets/2.jpeg' /> */}
                 <p>
-                    {' '}
+                    <SaveBtn />
+                    {/* {' '}
                     <button id='save' onclick='myFunction()'>
                         Save
-                    </button>
+                    </button> */}
                 </p>
             </div>
             <div>
-                {/* <img src='assets/3.jpeg' /> */}
                 <p>
-                    {' '}
+                    <SaveBtn />
+                    {/* {' '}
                     <button id='save' onclick='myFunction()'>
                         Save
-                    </button>
+                    </button> */}
                 </p>
             </div>
         </Carousel>
