@@ -1,9 +1,10 @@
 import React from 'react';
 import Carousel from '../components/Carousel.js';
+// import ResultsContainer from '../components/ResultsContainer';
 const Saved = () => {
     return (
         <div>
-            <h1>Here's all your saved content</h1>
+            <header>Here's all your saved content</header>
             <p>
                 <Carousel />
             </p>
