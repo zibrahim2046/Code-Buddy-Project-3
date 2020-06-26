@@ -29,8 +29,12 @@ const NavBar = (props) => {
                         <NavItem>
                             <NavLink href='/help'>Home</NavLink>
                         </NavItem>
+
                         <NavItem>
                             <NavLink href='/results'>Content</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href='/help'>Saved</NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink href='https://github.com/zibrahim2046/Code-Buddy-Project-3'>Github</NavLink>

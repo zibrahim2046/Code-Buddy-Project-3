@@ -4,7 +4,7 @@ import YouTube from 'react-youtube';
 class Video extends React.Component {
     render() {
         const opts = {
-            height: '390',
+            height: '350',
             width: '640',
             playerVars: {
                 //   https://developers.google.com/youtube/player_parameters
