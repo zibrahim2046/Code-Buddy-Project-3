@@ -142,7 +142,7 @@ class RegisterModal extends Component {
 }
 
 const mapStateToProps = state => ({
-    IsAuthenticated: state.auth.IsAuthenticated,
+    isAuthenticated: state.auth.isAuthenticated,
     error: state.error
 });
 
