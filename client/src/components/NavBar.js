@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import styled from 'styled-components';
+import Logout from './auth/Logout'
 
 const NavContainer = styled.div`
     width: 100%;
@@ -34,6 +35,9 @@ const NavBar = (props) => {
                         </NavItem>
                         <NavItem>
                             <NavLink href='https://github.com/zibrahim2046/Code-Buddy-Project-3'>Github</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <Logout />
                         </NavItem>
                     </Nav>
                 </Collapse>

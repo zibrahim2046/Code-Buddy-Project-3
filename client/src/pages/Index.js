@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import styled from 'styled-components';
 import Authentication from '../components/Authentication';
+import RegisterModal from '../components/auth/RegisterModal';
 
 const MainPage = () => {
     return (
@@ -22,8 +23,9 @@ const MainPage = () => {
                     <Input type='password' name='password' id='password' placeholder='' />
                 </FormGroup>
                 <Button>Submit</Button>
-            </Form>
-            <Authentication buttonLabel='New User?' style={{ marginTop: 100 }} />
+            </Form><br /><br />
+            <RegisterModal buttonLabel='New User?' style={{ marginTop: 100 }} />
+            {/* <Authentication buttonLabel='New User?' style={{ marginTop: 100 }} /> */}
         </div>
     );
 };
