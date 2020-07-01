@@ -2,10 +2,15 @@ import React from 'react';
 import { Container } from 'reactstrap';
 import VideoPlayer from '../components/VideoPlayer';
 import styled from 'styled-components';
+import ResultsTabs from '../components/ResultsTabs';
 
 const LinkContainer = styled.div`
     display: flex;
     flex-direction: column;
+`;
+const VideoContainer = styled.div`
+    display: flex;
+    flex-direction: row;
 `;
 
 const links = [
@@ -31,7 +36,12 @@ const WebLink = ({ url, text }) => (
 
 const ResultsContainer = (props) => (
     <Container className='themed-container'>
-        <VideoPlayer />
+        <VideoContainer>
+            <VideoPlayer />
+            <VideoPlayer />
+            <VideoPlayer />
+        </VideoContainer>
+
         <LinkContainer>
             {links.map(({ url, text }, index) => (
                 <WebLink key={index} url={url} text={text} />
