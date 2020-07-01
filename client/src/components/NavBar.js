@@ -53,14 +53,13 @@ const NavContainer = styled.div`
 // const toggleNavbar = () => setCollapsed(!collapsed);
 
 class NavBar extends Component {
-   
-
         state = {
             isOpen: false
         };
 
         static propTypes = {
-            auth: PropTypes.object.isRequired
+            auth: PropTypes.object.isRequired,
+            // isAuthenticated: PropTypes.bool
         }
 
         toggle = () => {
@@ -68,7 +67,6 @@ class NavBar extends Component {
                 isOpen: !this.state.isOpen
             })
         }
-
         
         render() {
             const { isAuthenticated, user } = this.props.auth;
@@ -111,7 +109,8 @@ class NavBar extends Component {
 };
 
 const mapStateToProps = state => ({
-    auth: state.auth
+    auth: state.auth,
+    // isAuthenticated: state.auth.isAuthenticated
 })
 
 export default connect(mapStateToProps, null)(NavBar);

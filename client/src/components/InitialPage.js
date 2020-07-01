@@ -20,6 +20,8 @@ class InitialPage extends Component {
         const guestLinks = (
             <Fragment>
                 <p>Please Sign In or Register To Continue</p>
+                <br />
+                <br />
                 <LoginModal buttonLabel='Login' style={{ marginTop: 100 }} />
                 <RegisterModal buttonLabel='New User?' style={{ marginTop: 100 }} />
             </Fragment>
@@ -28,6 +30,7 @@ class InitialPage extends Component {
         const authLinks = (
             <Fragment>
                 <h2>{ user ? `Welcome ${user.firstName}` : `` }</h2>
+                <h3>Please use the toggle in upper left corner of the page to navigate</h3>
             </Fragment>
 
         )
