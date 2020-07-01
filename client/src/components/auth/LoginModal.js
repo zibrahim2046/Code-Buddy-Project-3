@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input, Alert } from 'reactstrap';
 import { connect } from 'react-redux';
-// import InputForm from './InputForm';
 import PropTypes from 'prop-types';
-import { register } from '../../actions/authActions';
+import { login } from '../../actions/authActions';
 import { clearErrors } from '../../actions/errorActions';
 
-class RegisterModal extends Component {
+class LoginModal extends Component {
     state = {
         modal: false,
-        firstName: '',
-        lastName: '',
         userName: '',
         password: '',
         msg: null
@@ -19,7 +16,7 @@ class RegisterModal extends Component {
     static propTypes = {
         isAuthenticated: PropTypes.bool,
         error: PropTypes.object.isRequired,
-        register: PropTypes.func.isRequired,
+        login: PropTypes.func.isRequired,
         clearErrors: PropTypes.func.isRequired
     }
 
@@ -27,7 +24,7 @@ class RegisterModal extends Component {
         const { error, isAuthenticated } = this.props;
         if (error !== prevProps.error) {
             // Check for register error
-            if(error.id === 'REGISTER_FAIL') {
+            if(error.id === 'LOGIN_FAIL') {
                 this.setState({ msg: error.msg.msg });
             } else {
                 this.setState({ msg: null })
@@ -59,18 +56,16 @@ class RegisterModal extends Component {
     onSubmit = event => {
         event.preventDefault();
 
-        const { firstName, lastName, userName, password } = this.state;
+        const { userName, password } = this.state;
 
-        // Create user object
-        const newUser = {
-            firstName,
-            lastName,
+        const user = {
             userName,
             password
-        };
+        }
 
-        // Attempt to register
-        this.props.register(newUser);
+        // Attempt to login
+        this.props.login(user);
+
     };
 
     render() {
@@ -80,35 +75,15 @@ class RegisterModal extends Component {
                     color="secondary"
                     style={{ marginBottom: '2rem' }}
                     onClick={this.toggle}>
-                        Register User
+                        Login
                 </Button>
 
                 <Modal isOpen={this.state.modal} toggle={this.toggle}>
-                    <ModalHeader toggle={this.toggle}>Register</ModalHeader>
+                    <ModalHeader toggle={this.toggle}>Login</ModalHeader>
                     <ModalBody>
                         { this.state.msg ? <Alert color="danger">{ this.state.msg }</Alert> : null }
                         <Form onSubmit={this.onSubmit}>
                             <FormGroup>
-                                <Label for="firstName">First Name</Label>
-                                <Input
-                                    type="text"
-                                    name="firstName"
-                                    id="firstName"
-                                    placeholder="First Name"
-                                    className="mb-3"
-                                    onChange={this.onChange}
-                                />
-
-                                <Label for="lastName">Last Name</Label>
-                                <Input
-                                    type="text"
-                                    name="lastName"
-                                    id="lastName"
-                                    placeholder="last Name"
-                                    className="mb-3"
-                                    onChange={this.onChange}
-                                />
-
                                 <Label for="userName">User Name</Label>
                                 <Input
                                     type="text"
@@ -129,7 +104,7 @@ class RegisterModal extends Component {
                                     onChange={this.onChange}
                                 />
                                 <Button color="dark" style={{ marginTop: '2rem' }} block>
-                                    Register
+                                    Login
                                 </Button>    
                             </FormGroup>
                         </Form>
@@ -148,5 +123,5 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps,
-    { register, clearErrors }
-)(RegisterModal);
+    { login, clearErrors }
+)(LoginModal);

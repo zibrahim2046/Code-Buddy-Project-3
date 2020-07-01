@@ -43,7 +43,7 @@ export const register = ({ firstName, lastName, userName, password }) => dispatc
     }
 
     // Request body
-    const body = JSON.stringify({firstName, lastName, userName, password});
+    const body = JSON.stringify({ firstName, lastName, userName, password });
 
     axios.post('/api/users', body, config)
         .then(res => dispatch({
@@ -54,6 +54,31 @@ export const register = ({ firstName, lastName, userName, password }) => dispatc
             dispatch(returnErrors(err.response.data, err.response.status, 'REGISTER_FAIL'));
             dispatch({
                 type: REGISTER_FAIL
+            });
+        });
+}
+
+// Login User
+export const login = ({ userName, password }) => dispatch => {
+    // Headers
+    const config = {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+
+    // Request body
+    const body = JSON.stringify({ userName, password });
+
+    axios.post('/api/auth', body, config)
+        .then(res => dispatch({
+            type: LOGIN_SUCCESS,
+            payload: res.data
+        }))
+        .catch(err => {
+            dispatch(returnErrors(err.response.data, err.response.status, 'LOGIN_FAIL'));
+            dispatch({
+                type: LOGIN_FAIL
             });
         });
 }

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 import { Provider } from 'react-redux';
 import store from './store';
 import { loadUser } from './actions/authActions';
+import NavBar from './components/NavBar'
 
 
 // import './App.css';
@@ -25,6 +26,7 @@ class App extends Component {
         return (
             <Provider store={store}>
                 <React.Fragment>
+                    <NavBar />
                     <Layout>
                         <Router>
                             <Switch>
