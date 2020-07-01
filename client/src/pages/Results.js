@@ -4,7 +4,6 @@ import Loader from '../components/Loader';
 // import ResultsCarousel from '../components/Carousel';
 // import ResultsContainer from '../components/ResultsContainer';
 import ResultsTabs from '../components/ResultsTabs';
-import ResultsContainer from '../components/ResultsContainer';
 
 const Results = () => {
     const [loading, setLoading] = useState(true);
@@ -22,8 +21,6 @@ const Results = () => {
             ) : (
                 <>
                     <ResultsTabs />
-                    {/* <ResultsCarousel /> */}
-                    {/* <ResultsContainer /> */}
                 </>
             )}
         </div>
