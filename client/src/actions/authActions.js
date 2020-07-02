@@ -20,11 +20,12 @@ export const loadUser = () => (dispatch, getState) => {
     
 
     axios.get('/api/auth/user', tokenConfig(getState))
-        .then(res => dispatch ({
+        .then(res => (dispatch ({
             type: USER_LOADED,
             payload: res.data
-        }))
+        }),console.log(res.data)))
         .catch(err => {
+            console.log('error test ', err)
             dispatch(returnErrors(err.response.data, err.response.status));
             dispatch ({
                 type: AUTH_ERROR
@@ -92,6 +93,8 @@ export const logout = () => {
     
 //Setup config/headers and token
 export const tokenConfig = getState => {
+    console.log('getState ', getState, getState());
+    
     //Get token from localstorage
     const token = getState().auth.token;
         

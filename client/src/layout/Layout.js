@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
 import NavBar from '../components/NavBar';
+// import { connect } from 'react-redux;';
+// import PropTypes from 'prop-types';
 
 const Container = styled.main`
     height: 100vh;
@@ -33,3 +35,34 @@ const Layout = ({ children }) => (
     </>
 );
 export default Layout;
+
+// class Layout extends Component {
+    
+
+//     static propTypes = {
+//         auth: PropTypes.object.isRequired,
+//         // isAuthenticated: PropTypes.bool
+//     }
+
+       
+//     render() {
+//         const { isAuthenticated, user } = this.props.auth;
+
+//         return(
+//             <div>
+//                 <NavBar />
+//                 <Container>
+//                     <Content>{children}</Content>
+//                 </Container>
+//             </div>
+//         );
+//     }
+
+// };
+
+// const mapStateToProps = state => ({
+// auth: state.auth,
+// // isAuthenticated: state.auth.isAuthenticated
+// })
+
+// export default connect(mapStateToProps, null)(Layout);
