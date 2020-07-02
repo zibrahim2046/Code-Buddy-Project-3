@@ -1,20 +1,29 @@
 import axios from 'axios';
-import { SAVED_ITEMS, ADD_ITEMS, DELETE_ITEM, SAVED_LOADING } from  './types';
+import { SAVED_ITEMS, ADD_ITEMS, DELETE_ITEM, SAVED_LOADING } from './types';
 
-export const savedItems = () => dispatch => {
+export const savedItems = ({ videoURL, books }) => dispatch => {
     dispatch(setSavedLoading());
     axios
         .get('/api/saved')
-        .then(res => 
+        .then(res =>
             dispatch({
-                type:GET_SAVED,
+                type: GET_SAVED,
                 payload: res.data
             })
         )
 };
 
-export const setSavedLoading = () => {
+//Save Content
+
+export const setSavedItems = ({ videoURL, books }) => dispatch => {
     return {
-        type:  SAVED_LOADING
+        type: SAVED_ITEMS
     }
 }
+
+const body = JSON.stringify({ videoURL, books });
+
+axios.post('/api/saved', body, config).then(res => dispatch({
+    type: SAVED_ITEMS,
+    payload: res.data
+}));
