@@ -16,6 +16,9 @@ router.post("/", (req, res) => {
     if(!firstName || !lastName || !userName || !password ) {
         return res.status(400).json({ msg: "Please enter all fields" });
     }
+    if(password.length < 8) {
+        return res.status(400).json({ msg: "Password must be atleast 8 characters. Please try a new password." })
+    }
 
     //Check for existing user
     User.findOne({ userName })

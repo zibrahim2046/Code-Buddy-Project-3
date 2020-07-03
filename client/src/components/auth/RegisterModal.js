@@ -124,7 +124,7 @@ class RegisterModal extends Component {
                                     type="password"
                                     name="password"
                                     id="password"
-                                    placeholder="Password"
+                                    placeholder="Password. Must be at least 8 characters long."
                                     className="mb-3"
                                     onChange={this.onChange}
                                 />

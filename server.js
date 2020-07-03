@@ -20,7 +20,11 @@ app.use(routes);
 
 const db = config.get('mongoURI');
 
-mongoose.connect(process.env.MONGODB_URI || db);
+mongoose.connect(process.env.MONGODB_URI || db,
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    });
 
 // Send every request to the React app
 // Define any API routes before this runs

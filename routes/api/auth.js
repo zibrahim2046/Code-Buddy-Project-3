@@ -11,11 +11,13 @@ const auth = require('../../middleware/auth')
 
 router.post("/", (req, res) => {
     const { userName, password } = req.body;
-
+    
+    
     //validation
-    if(!userName || !password ) {
+    if(!userName || !password) {
         return res.status(400).json({ msg: "Please enter all fields" });
-    }
+    } 
+
 
     //Check for existing user
     User.findOne({ userName })

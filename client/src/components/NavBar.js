@@ -1,10 +1,8 @@
-import React, { useState, Component, Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-
-import LoginModal from '../components/auth/LoginModal';
 import Logout from './auth/Logout'
 
 
@@ -69,7 +67,7 @@ class NavBar extends Component {
         }
         
         render() {
-            const { isAuthenticated, user } = this.props.auth;
+            const { isAuthenticated } = this.props.auth;
 
             const authLinks = (
                 <Fragment>
@@ -110,7 +108,6 @@ class NavBar extends Component {
 
 const mapStateToProps = state => ({
     auth: state.auth,
-    // isAuthenticated: state.auth.isAuthenticated
 })
 
 export default connect(mapStateToProps, null)(NavBar);
