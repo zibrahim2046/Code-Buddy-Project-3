@@ -30,8 +30,8 @@ const videoID = [
 class Video extends React.Component {
     render() {
         const opts = {
-            height: '175',
-            width: '320',
+            height: '400',
+            width: '900',
             playerVars: {
                 //   https://developers.google.com/youtube/player_parameters
                 autoplay: 1,
