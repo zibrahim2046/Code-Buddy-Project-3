@@ -1,6 +1,8 @@
 import React from 'react';
 // import 'bootstrap/dist/css/bootstrap.css';
 import { UncontrolledButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { tokenConfig } from '../actions/authActions'
+import { returnErrors } from '../actions/errorActions'
 
 const HelpPage = () => {
     // const [dropdownOpen, setOpen] = React.useState(false);

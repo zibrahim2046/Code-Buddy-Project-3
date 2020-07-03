@@ -53,7 +53,7 @@ const ResultsTabs = (props) => {
                             toggle('1');
                         }}
                     >
-                        Tab1
+                        Videos
                     </NavLink>
                 </NavItem>
                 <NavItem>
@@ -63,7 +63,7 @@ const ResultsTabs = (props) => {
                             toggle('2');
                         }}
                     >
-                        Tab2
+                        Links
                     </NavLink>
                 </NavItem>
                 <NavItem>
@@ -73,7 +73,7 @@ const ResultsTabs = (props) => {
                             toggle('3');
                         }}
                     >
-                        Tab3
+                        Books
                     </NavLink>
                 </NavItem>
             </Nav>
@@ -82,7 +82,7 @@ const ResultsTabs = (props) => {
                     <Row>
                         <Col sm='12'>
                             <Video />
-                            <SaveBtn />
+                            <SaveBtn style={{ marginRight: 25 }} />
                             <RefreshBtn />
                         </Col>
                     </Row>

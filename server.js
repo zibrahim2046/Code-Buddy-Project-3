@@ -1,9 +1,11 @@
 const express = require('express');
-// const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 const routes = require('./routes');
 const path = require('path');
 const PORT = process.env.PORT || 3001;
 const app = express();
+const config = require('config');
+
 
 //Middleware defined
 app.use(express.urlencoded({ extended: true }));
@@ -16,7 +18,9 @@ if (process.env.NODE_ENV === 'production') {
 
 app.use(routes);
 
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/code-buddy");
+const db = config.get('mongoURI');
+
+mongoose.connect(process.env.MONGODB_URI || db);
 
 // Send every request to the React app
 // Define any API routes before this runs
