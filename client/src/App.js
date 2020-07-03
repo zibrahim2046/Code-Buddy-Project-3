@@ -6,7 +6,6 @@ import store from './store';
 import { loadUser } from './actions/authActions';
 // import NavBar from './components/NavBar'
 
-
 // import './App.css';
 
 //Pages
@@ -26,26 +25,25 @@ class App extends Component {
     render() {
         return (
             <Provider store={store}>
-            
-                    <Layout>
-                        <Router>
-                            <Switch>
-                                <Route exact path='/' component={MainPage} />
-                                <Route exact path='/help' component={HelpPage} />
-                                <Route exact path='/results' component={Results} />
-                                <Route exact path='/404' component={NotFound} />
-                                <Redirect to='/404' />
-                            </Switch>
-                        </Router>
-                    </Layout>
-                
-            </Provider>    
+                <Layout>
+                    <Router>
+                        <Switch>
+                            <Route exact path='/' component={MainPage} />
+                            <Route exact path='/help' component={HelpPage} />
+                            <Route exact path='/results' component={Results} />
+                            <Route exact path='/saved' component={SavedPage} />
+                            <Route exact path='/404' component={NotFound} />
+                            <Redirect to='/404' />
+                        </Switch>
+                    </Router>
+                </Layout>
+            </Provider>
         );
     }
 }
 export default App;
 
-// const App = () => { 
+// const App = () => {
 //     useEffect(() => {
 //         store.dispatch(loadUser());
 //     }, []);
@@ -66,10 +64,8 @@ export default App;
 //                     </Router>
 //                 </Layout>
 //             {/* </React.Fragment> */}
-//         </Provider>    
+//         </Provider>
 //     );
 // }
 
 // export default App;
-
-
