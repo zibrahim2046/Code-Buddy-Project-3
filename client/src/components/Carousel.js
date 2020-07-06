@@ -2,8 +2,8 @@ import React from 'react';
 import Video from '../components/VideoPlayer';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import SaveBtn from '../components/SaveBtn';
 import styled from 'styled-components';
+import DeleteBtn from '../components/DeleteBtn';
 
 const Container = styled.div`
     height: 400px;
@@ -17,19 +17,19 @@ const ResultsCarousel = () => {
                 <div>
                     <Video />
                     <p>
-                        <SaveBtn />
+                        <DeleteBtn />
                     </p>
                 </div>
                 <div>
                     <Video />
                     <p>
-                        <SaveBtn />
+                        <DeleteBtn />
                     </p>
                 </div>
                 <div>
                     <Video />
                     <p>
-                        <SaveBtn />
+                        <DeleteBtn />
                     </p>
                 </div>
             </Carousel>
