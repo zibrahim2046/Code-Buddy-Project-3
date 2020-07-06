@@ -15,6 +15,11 @@ const VideoContainer = styled.div`
     flex-direction: row;
 `;
 
+const TabContainer = styled.div`
+    height: 400px;
+    width: 900px;
+`;
+
 const links = [
     {
         url: 'https://stackoverflow.com/',
@@ -44,8 +49,8 @@ const ResultsTabs = (props) => {
     };
 
     return (
-        <div>
-            <Nav tabs>
+        <TabContainer>
+            <Nav style={{ justifyContent: 'center' }} tabs>
                 <NavItem>
                     <NavLink
                         className={classnames({ active: activeTab === '1' })}
@@ -106,7 +111,7 @@ const ResultsTabs = (props) => {
                     </Row>
                 </TabPane>
             </TabContent>
-        </div>
+        </TabContainer>
     );
 };
 

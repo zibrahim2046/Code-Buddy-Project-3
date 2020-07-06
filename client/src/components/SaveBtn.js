@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
+import Video from '../components/VideoPlayer'
 
 
 class SaveBtn extends Component {
@@ -13,7 +14,7 @@ class SaveBtn extends Component {
                     'Content-type': 'application/json',
                 },
                 body: JSON.stringify({
-                    videoID: 'kLO4X_3VYdg'
+                    videoID: this.props.videoID.getVideo
                 })
             });
             console.log('Result:' + result)
