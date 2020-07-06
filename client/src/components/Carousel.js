@@ -15,19 +15,16 @@ const ResultsCarousel = () => {
         <Container>
             <Carousel>
                 <div>
-                    <Video />
                     <p>
                         <DeleteBtn />
                     </p>
                 </div>
                 <div>
-                    <Video />
                     <p>
                         <DeleteBtn />
                     </p>
                 </div>
                 <div>
-                    <Video />
                     <p>
                         <DeleteBtn />
                     </p>

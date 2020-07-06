@@ -17,7 +17,7 @@ const HelpPage = () => {
 
     return (
         <div>
-            <h1>Hello, User! My name is Code Buddy, what can I help you with?</h1>
+            <h1>What can I help you with?</h1>
             <UncontrolledButtonDropdown style={{ marginRight: 25 }}>
                 <DropdownToggle caret>HTML5/CSS</DropdownToggle>
                 <DropdownMenu>

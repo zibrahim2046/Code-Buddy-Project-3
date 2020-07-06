@@ -6,8 +6,10 @@ import Video from '../components/VideoPlayer';
 import SaveBtn from './SaveBtn';
 
 const LinkContainer = styled.div`
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
+    font-size: 150%;
 `;
 const VideoContainer = styled.div`
     display: flex;
@@ -87,7 +89,9 @@ const ResultsTabs = ({ topic }) => {
                         <Col sm='12'>
                             <Video topic={topic} />
                             <SaveBtn style={{ marginRight: 25 }} />
-                            <Button color='secondary'>New Video</Button>
+                            <Button style={{ marginLeft: 25 }} color='secondary'>
+                                New Video
+                            </Button>
                         </Col>
                     </Row>
                 </TabPane>
