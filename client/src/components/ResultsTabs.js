@@ -16,8 +16,8 @@ const VideoContainer = styled.div`
 `;
 
 const TabContainer = styled.div`
-    height: 500px;
-    width: 1000px;
+    height: 400px;
+    width: 900px;
 `;
 
 const links = [

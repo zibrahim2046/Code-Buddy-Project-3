@@ -3,47 +3,37 @@ import Video from '../components/VideoPlayer';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import SaveBtn from '../components/SaveBtn';
+import styled from 'styled-components';
 
-// const Carousel = styled.div`
-//     height: 100%;
-//     width: 100%;
-//     background-color: blue;
-// `;
+const Container = styled.div`
+    height: 400px;
+    width: 900px;
+`;
 
 const ResultsCarousel = () => {
     return (
-        // <Container>
-        <Carousel>
-            <div>
-                <Video />
-                {/* <img src='assets/1.jpeg' /> */}
-                <p>
-                    <SaveBtn />
-                    {/* <button id='save' style={{ marginBottom: 50 }} onclick='myFunction()'>
-                        Save
-                    </button> */}
-                </p>
-            </div>
-            <div>
-                <p>
-                    <SaveBtn />
-                    {/* {' '}
-                    <button id='save' onclick='myFunction()'>
-                        Save
-                    </button> */}
-                </p>
-            </div>
-            <div>
-                <p>
-                    <SaveBtn />
-                    {/* {' '}
-                    <button id='save' onclick='myFunction()'>
-                        Save
-                    </button> */}
-                </p>
-            </div>
-        </Carousel>
-        // </Container>
+        <Container>
+            <Carousel>
+                <div>
+                    <Video />
+                    <p>
+                        <SaveBtn />
+                    </p>
+                </div>
+                <div>
+                    <Video />
+                    <p>
+                        <SaveBtn />
+                    </p>
+                </div>
+                <div>
+                    <Video />
+                    <p>
+                        <SaveBtn />
+                    </p>
+                </div>
+            </Carousel>
+        </Container>
     );
 };
 export default ResultsCarousel;
