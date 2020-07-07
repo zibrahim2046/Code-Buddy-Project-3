@@ -1,0 +1,59 @@
+Intro to HTML5/CSS -
+https://youtu.be/hu-q2zYwEYs
+https://youtu.be/kLO4X_3VYdg
+https://youtu.be/pm5OVxpul48
+
+Styling your HTML - 
+https://youtu.be/yfoY53QXEnI
+https://youtu.be/1PnVor36_40
+https://youtu.be/s7ONvIgOWdM
+
+Advanced HTML/CSS Topics - 
+https://youtu.be/1haoknb4m6k
+https://youtu.be/zHUpx90NerM
+https://youtu.be/I_vNgSro7jA
+
+Intro to NodeJS - 
+https://youtu.be/TlB_eWDSMt4
+https://youtu.be/U8XF6AFGqlc
+https://youtu.be/8u1o-OmOeGQ
+
+NodeJS and MYSQL - 
+https://youtu.be/EN6Dx22cPRI
+https://youtu.be/4fWWn2Pe2Mk
+https://youtu.be/aEm0BN493sU
+
+Restful API's - 
+https://youtu.be/7YcW25PHnAA
+https://youtu.be/Q-BpqyOT3a8
+https://youtu.be/WfCJ3sHnLBM
+
+Intro to Javascript - 
+https://youtu.be/W6NZfCO5SIk
+https://youtu.be/3EMxBkqC4z0
+https://youtu.be/PkZNo7MFNFg
+
+For Loops and Functions - 
+https://youtu.be/s9wW2PpJsmQ
+https://youtu.be/Au7JCqkVq9M
+https://youtu.be/xUI5Tsl2JpY
+
+Back End Javascript - 
+https://youtu.be/0Kv_k4ypj6o
+https://youtu.be/4r6WdaY3SOA
+https://youtu.be/fcvgVfo2GAg
+
+Create-React-App - 
+https://youtu.be/pCgDRgmfilE
+https://youtu.be/U9T6YkEDkMo
+https://youtu.be/MRIMT0xPXFI
+
+ES6 Syntax - 
+https://youtu.be/AfWYO8t7ed4
+https://youtu.be/h33Srr5J9nY
+https://youtu.be/IEf1KAcK6A8
+
+Conditional Rendering - 
+https://youtu.be/7o5FPaVA9m0
+https://youtu.be/3wvdq_j5S1c
+https://youtu.be/e_hMcTZQ8C0
