@@ -75,9 +75,7 @@ class NavBar extends Component {
                 <NavItem>
                     <NavLink href='/help'>Home</NavLink>
                 </NavItem>
-                <NavItem>
-                    <NavLink href='/results'>Content</NavLink>
-                </NavItem>
+
                 <NavItem>
                     <NavLink href='/saved'>Saved Content</NavLink>
                 </NavItem>
