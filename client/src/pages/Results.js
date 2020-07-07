@@ -4,9 +4,12 @@ import Loader from '../components/Loader';
 // import ResultsCarousel from '../components/Carousel';
 // import ResultsContainer from '../components/ResultsContainer';
 import ResultsTabs from '../components/ResultsTabs';
+import { useLocation } from 'react-router-dom';
 
 const Results = () => {
     const [loading, setLoading] = useState(true);
+    const location = useLocation();
+    const { topic } = location.state;
 
     useEffect(() => {
         setTimeout(() => {
@@ -20,7 +23,7 @@ const Results = () => {
                 <Loader />
             ) : (
                 <>
-                    <ResultsTabs />
+                    <ResultsTabs topic={topic} />
                 </>
             )}
         </div>

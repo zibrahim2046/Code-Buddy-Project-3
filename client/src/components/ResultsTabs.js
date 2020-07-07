@@ -4,11 +4,12 @@ import classnames from 'classnames';
 import styled from 'styled-components';
 import Video from '../components/VideoPlayer';
 import SaveBtn from './SaveBtn';
-import RefreshBtn from '../components/RefreshBtn';
 
 const LinkContainer = styled.div`
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
+    font-size: 150%;
 `;
 const VideoContainer = styled.div`
     display: flex;
@@ -41,7 +42,7 @@ const WebLink = ({ url, text }) => (
     </a>
 );
 
-const ResultsTabs = (props) => {
+const ResultsTabs = ({ topic }) => {
     const [activeTab, setActiveTab] = useState('1');
 
     const toggle = (tab) => {
@@ -86,9 +87,11 @@ const ResultsTabs = (props) => {
                 <TabPane tabId='1'>
                     <Row>
                         <Col sm='12'>
-                            <Video />
+                            <Video topic={topic} />
                             <SaveBtn style={{ marginRight: 25 }} />
-                            <RefreshBtn />
+                            <Button style={{ marginLeft: 25 }} color='secondary'>
+                                New Video
+                            </Button>
                         </Col>
                     </Row>
                 </TabPane>

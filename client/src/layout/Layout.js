@@ -35,34 +35,3 @@ const Layout = ({ children }) => (
     </>
 );
 export default Layout;
-
-// class Layout extends Component {
-    
-
-//     static propTypes = {
-//         auth: PropTypes.object.isRequired,
-//         // isAuthenticated: PropTypes.bool
-//     }
-
-       
-//     render() {
-//         const { isAuthenticated, user } = this.props.auth;
-
-//         return(
-//             <div>
-//                 <NavBar />
-//                 <Container>
-//                     <Content>{children}</Content>
-//                 </Container>
-//             </div>
-//         );
-//     }
-
-// };
-
-// const mapStateToProps = state => ({
-// auth: state.auth,
-// // isAuthenticated: state.auth.isAuthenticated
-// })
-
-// export default connect(mapStateToProps, null)(Layout);
