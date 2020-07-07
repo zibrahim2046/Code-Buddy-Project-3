@@ -6,13 +6,10 @@ import PropTypes from 'prop-types';
 import RegisterModal from '../components/auth/RegisterModal';
 import LoginModal from '../components/auth/LoginModal';
 
-
-
 class InitialPage extends Component {
-
     static propTypes = {
-        auth: PropTypes.object.isRequired
-    }
+        auth: PropTypes.object.isRequired,
+    };
 
     render() {
         const { isAuthenticated, user } = this.props.auth;
@@ -25,20 +22,18 @@ class InitialPage extends Component {
                 <LoginModal buttonLabel='Login' style={{ marginTop: 100 }} />
                 <RegisterModal buttonLabel='New User?' style={{ marginTop: 100 }} />
             </Fragment>
-        )
+        );
 
         const authLinks = (
             <Fragment>
-                <h2>{ user ? `Welcome ${user.firstName}` : `` }</h2>
+                <h2>{user ? `Welcome ${user.firstName}` : ``}</h2>
                 <h3>Please use the toggle in upper left corner of the page to navigate</h3>
             </Fragment>
-
-        )
+        );
 
         return (
             <div className='App'>
-                <h1>Welcome To Code Buddy</h1>
-                { isAuthenticated ? authLinks : guestLinks }
+                {isAuthenticated ? authLinks : guestLinks}
                 {/* <p>Please Sign In or Register To Continue</p> */}
                 {/* <LoginModal buttonLabel='Login' style={{ marginTop: 100 }} />
                 <RegisterModal buttonLabel='New User?' style={{ marginTop: 100 }} /> */}
@@ -46,11 +41,10 @@ class InitialPage extends Component {
             </div>
         );
     }
-        
-};
+}
 
-const mapStateToProps = state => ({
-    auth: state.auth
-})
+const mapStateToProps = (state) => ({
+    auth: state.auth,
+});
 
 export default connect(mapStateToProps, null)(InitialPage);
