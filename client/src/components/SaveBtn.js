@@ -14,7 +14,7 @@ class SaveBtn extends Component {
                     'Content-type': 'application/json',
                 },
                 body: JSON.stringify({
-                    videoID: this.props.videoID.getVideo
+                    //videoID: this.props.videoID.getVideo
                 })
             });
             console.log('Result:' + result)
