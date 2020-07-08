@@ -1,14 +1,6 @@
 import React from 'react';
 import { Button } from 'reactstrap';
 
-// const SaveBtn = () => {
-//     return (
-//         <Button onClick={() => this.postData()} color='secondary'>
-//             Save
-//         </Button>
-//     );
-// };
-
 class SaveBtn extends React.Component {
     async postData() {
         try {
