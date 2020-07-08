@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
 import NavBar from '../components/NavBar';
+// import { connect } from 'react-redux;';
+// import PropTypes from 'prop-types';
 
 const Container = styled.main`
     height: 100vh;

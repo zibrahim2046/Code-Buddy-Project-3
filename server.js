@@ -1,10 +1,12 @@
 const express = require('express');
-// const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const routes = require('./routes');
 const path = require('path');
 const PORT = process.env.PORT || 3001;
 const app = express();
+const config = require('config');
 
+//const items = require('./routes/api/items');
 //Middleware defined
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -13,10 +15,16 @@ app.use(express.json());
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
 }
-
+//app.use('/api/items', items);
 app.use(routes);
 
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/code-buddy");
+const db = config.get('mongoURI');
+
+mongoose.connect(process.env.MONGODB_URI || db, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
+
 
 // Send every request to the React app
 // Define any API routes before this runs

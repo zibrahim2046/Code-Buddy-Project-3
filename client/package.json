@@ -4,12 +4,17 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "axios": "^0.19.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-redux": "^7.2.0",
+    "react-responsive-carousel": "^3.2.9",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^2.1.1",
     "react-youtube": "^7.11.2",
     "reactstrap": "^8.4.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
     "styled-components": "^5.1.1"
   },
   "scripts": {
