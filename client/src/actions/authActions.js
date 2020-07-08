@@ -23,7 +23,7 @@ export const loadUser = () => (dispatch, getState) => {
         .then(res => (dispatch ({
             type: USER_LOADED,
             payload: res.data
-        }),console.log(res.data)))
+        })))
         .catch(err => {
             console.log('error test ', err)
             dispatch(returnErrors(err.response.data, err.response.status));
@@ -93,7 +93,7 @@ export const logout = () => {
     
 //Setup config/headers and token
 export const tokenConfig = getState => {
-    console.log('getState ', getState, getState());
+    
     
     //Get token from localstorage
     const token = getState().auth.token;

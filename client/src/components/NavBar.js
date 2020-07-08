@@ -1,4 +1,4 @@
-import React, { useState, Component, Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import styled from 'styled-components';
 import { connect } from 'react-redux';

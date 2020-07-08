@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Button } from 'reactstrap';
+import Video from '../components/VideoPlayer';
 
 class SaveBtn extends React.Component {
     async postData() {
