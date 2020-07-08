@@ -42,6 +42,20 @@ const WebLink = ({ url, text }) => (
     </a>
 );
 
+const RefreshBtn = () => {
+    function refreshPage() {
+        window.location.reload(false);
+    }
+
+    return (
+        <div>
+            <Button style={{ marginTop: 25 }} onClick={refreshPage}>
+                New Content
+            </Button>
+        </div>
+    );
+};
+
 const ResultsTabs = ({ topic }) => {
     const [activeTab, setActiveTab] = useState('1');
 
@@ -89,9 +103,7 @@ const ResultsTabs = ({ topic }) => {
                         <Col sm='12'>
                             <Video topic={topic} />
                             <SaveBtn style={{ marginRight: 25 }} />
-                            <Button style={{ marginLeft: 25 }} color='secondary'>
-                                New Video
-                            </Button>
+                            <RefreshBtn />
                         </Col>
                     </Row>
                 </TabPane>
