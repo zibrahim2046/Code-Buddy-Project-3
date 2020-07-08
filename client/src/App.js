@@ -19,20 +19,20 @@ class App extends Component {
     render() {
         return (
             <Provider store={store}>
-                {/* <VideoContextProvider> */}
-                <Layout>
-                    <Router>
-                        <Switch>
-                            <Route exact path='/' component={MainPage} />
-                            <Route exact path='/help' component={HelpPage} />
-                            <Route exact path='/results' component={Results} />
-                            <Route exact path='/saved' component={SavedPage} />
-                            <Route exact path='/404' component={NotFound} />
-                            <Redirect to='/404' />
-                        </Switch>
-                    </Router>
-                </Layout>
-                {/* </VideoContextProvider> */}
+                <VideoContextProvider>
+                    <Layout>
+                        <Router>
+                            <Switch>
+                                <Route exact path='/' component={MainPage} />
+                                <Route exact path='/help' component={HelpPage} />
+                                <Route exact path='/results' component={Results} />
+                                <Route exact path='/saved' component={SavedPage} />
+                                <Route exact path='/404' component={NotFound} />
+                                <Redirect to='/404' />
+                            </Switch>
+                        </Router>
+                    </Layout>
+                </VideoContextProvider>
             </Provider>
         );
     }
