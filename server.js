@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const config = require('config');
 
+//const items = require('./routes/api/items');
 //Middleware defined
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -14,7 +15,7 @@ app.use(express.json());
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
 }
-
+//app.use('/api/items', items);
 app.use(routes);
 
 const db = config.get('mongoURI');
@@ -23,6 +24,7 @@ mongoose.connect(process.env.MONGODB_URI || db, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
+
 
 // Send every request to the React app
 // Define any API routes before this runs

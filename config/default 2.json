@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://ianibrahim:march201995@cluster0.rahxp.mongodb.net/codebuddy?retryWrites=true&w=majority",
+    "jwtSecret": "sl_myJwtSecret"
+}
