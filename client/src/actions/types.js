@@ -1,7 +1,7 @@
-export const SAVED_ITEMS = "SAVED_ITEMS";
-export const ADD_ITEMS = "ADD_ITEMS"
-export const DELETE_ITEM = "DELETE_ITEM"
-export const SAVED_LOADING = "SAVED_LOADING"
+export const GET_BOOKS = "GET_BOOKS";
+export const ADD_BOOKS = "ADD_BOOKS"
+export const DELETE_BOOKS = "DELETE_BOOKS"
+export const BOOKS_LOADING = "BOOKS_LOADING"
 export const USER_LOADING = "USER_LOADING";
 export const USER_LOADED = "USER_LOADED";
 export const AUTH_ERROR = "AUTH_ERROR";

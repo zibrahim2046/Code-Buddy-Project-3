@@ -1,4 +1,4 @@
-import { SAVED_ITEMS, ADD_ITEMS, DELETE_ITEM, SAVED_LOADING } from  '../actions/types';
+import { GET_BOOKS, ADD_BOOKS, DELETE_BOOKS, BOOKS_LOADING } from  '../actions/types';
 
 const initialState = {
     saved: [],
@@ -7,13 +7,17 @@ const initialState = {
 
 export default function(state = initialState, action) {
     switch(action.type) {
-        case SAVED_ITEMS:
+        case GET_BOOKS:
+            return {
+                ...state
+            }
+        case ADD_BOOKS:
             return {
                 ...state,
                 saved: action.payload,
                 loading: false
             }
-        case SAVED_LOADING:
+        case BOOKS_LOADING:
             return {
                 ...state,
                 loading: true
