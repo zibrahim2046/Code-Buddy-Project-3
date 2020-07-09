@@ -1,6 +1,6 @@
 export const GET_BOOKS = "GET_BOOKS";
-export const ADD_BOOKS = "ADD_BOOKS"
-export const DELETE_BOOKS = "DELETE_BOOKS"
+export const ADD_BOOK = "ADD_BOOK"
+export const DELETE_BOOK = "DELETE_BOOK"
 export const BOOKS_LOADING = "BOOKS_LOADING"
 export const USER_LOADING = "USER_LOADING";
 export const USER_LOADED = "USER_LOADED";

@@ -1,7 +1,7 @@
-import { GET_BOOKS, ADD_BOOKS, DELETE_BOOKS, BOOKS_LOADING } from  '../actions/types';
+import { GET_BOOKS, ADD_BOOK, DELETE_BOOK, BOOKS_LOADING } from  '../actions/types';
 
 const initialState = {
-    saved: [],
+    books: [],
     loading: false, 
 }
 
@@ -11,7 +11,12 @@ export default function(state = initialState, action) {
             return {
                 ...state
             }
-        case ADD_BOOKS:
+        case DELETE_BOOK:
+            return{
+                ...state,
+                books: state.items.filter(book => book.id !== action.payload)
+            }    
+        case ADD_BOOK:
             return {
                 ...state,
                 saved: action.payload,

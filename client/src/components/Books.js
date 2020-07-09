@@ -3,7 +3,9 @@ import BookSaveBtn from '../components/BookSaveBtn';
 import API from '../utils/API';
 import { Col, Row, Container } from '../components/Grid';
 import { List, ListItem } from '../components/List';
-// import { connect } from "react-redux"
+import { connect } from 'react-redux';
+import { getBooks } from '../actions/bookActions';
+import PropTypes from 'prop-types';
 
 class Books extends Component {
     state = {
@@ -12,8 +14,15 @@ class Books extends Component {
         search: '',
     };
 
+    state = {
+        books: [],
+        savedBooks: [],
+        search: '',
+    };
+
     componentDidMount() {
         //   this.handleInputChange();
+        this.props.getBooks();
         this.handleFormSubmit();
     }
 
@@ -110,4 +119,13 @@ class Books extends Component {
     }
 }
 
-export default Books;
+Books.propTypes = {
+    getBooks: PropTypes.func.isRequired,
+    book: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+    book: state.book,
+});
+
+export default connect(mapStateToProps, { getBooks })(Books);
