@@ -9,17 +9,19 @@ export default function(state = initialState, action) {
     switch(action.type) {
         case GET_BOOKS:
             return {
-                ...state
+                ...state,
+                books: action.payload,
+                loading: false
             }
         case DELETE_BOOK:
             return{
                 ...state,
-                books: state.items.filter(book => book.id !== action.payload)
+                books: state.items.filter(book => book._id !== action.payload)
             }    
         case ADD_BOOK:
             return {
                 ...state,
-                saved: action.payload,
+                books: [action.payload, ...state.books],
                 loading: false
             }
         case BOOKS_LOADING:

@@ -19,6 +19,7 @@ class InitialPage extends Component {
 
         const guestLinks = (
             <Fragment>
+                <h1>Welcome To Code Buddy</h1>
                 <p>Please Sign In or Register To Continue</p>
                 <br />
                 <br />
@@ -29,7 +30,8 @@ class InitialPage extends Component {
 
         const authLinks = (
             <Fragment>
-                <h2>{ user ? `Welcome ${user.firstName}` : `` }</h2>
+                <h1>{ user ? `Welcome ${user.firstName}` : `` }</h1>
+                <br />
                 <h3>Please use the toggle in upper left corner of the page to navigate</h3>
             </Fragment>
 
@@ -37,7 +39,7 @@ class InitialPage extends Component {
 
         return (
             <div className='App'>
-                <h1>Welcome To Code Buddy</h1>
+                {/* <h1>Welcome To Code Buddy</h1> */}
                 { isAuthenticated ? authLinks : guestLinks }
                 {/* <p>Please Sign In or Register To Continue</p> */}
                 {/* <LoginModal buttonLabel='Login' style={{ marginTop: 100 }} />

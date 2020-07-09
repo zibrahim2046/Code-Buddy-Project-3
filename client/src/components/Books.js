@@ -4,7 +4,7 @@ import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { connect } from "react-redux";
-import { getBooks } from "../actions/bookActions";
+import { addBook } from "../actions/bookActions";
 import PropTypes from "prop-types"
 
 
@@ -14,12 +14,12 @@ class Books extends Component {
     books: [],
     savedBooks: [],
     search: "",
-      
+    book: []  
   };
 
   componentDidMount() {
     //   this.handleInputChange();
-      this.props.getBooks();
+      
       this.handleFormSubmit();
   }
 
@@ -28,6 +28,49 @@ class Books extends Component {
       .then((res) => this.setState({ books: res.data.items }))
       .catch((err) => console.log(err));
   };
+
+//   searchBooks = (title) => {
+//     API.search(title)
+//       .then(res => {
+//           if (res.data.items === "error") {
+//               throw new Error(res.data.items)
+//           }
+//           else {
+//           let results = res.data.items
+//           results = results.map(result => {
+//               result = {
+//                   key: result.id,
+//                   id: result.id,
+//                   title: result.volumeInfo.title,
+//                   author: result.volumeInfo.authors,
+//                   description: result.volumeInfo.description,
+//                   link: result.volumeInfo.infoLink
+//               }
+//               return result;
+//           })
+      
+//         this.setState({ books: results })
+//       }})
+//       .catch((err) => console.log(err));
+//   };
+
+//   saveBook = (book) => {
+//     console.log('book' + JSON.stringify(book))
+//     console.log('title ' + book.title)
+//     // this.setState({ savedBooks: book })
+//     // console.log('savedBooks ' + savedBooks)
+
+//          const newBook = {
+            
+//              title: book.title,
+//              author: book.author,
+//              synopsis: book.synopsis,
+//              link: book.link,
+//          }
+//         this.props.addBook(newBook);
+//     //   })
+//     //   .catch((err) => console.log(err));
+//   };
 
   saveBook = (book) => {
     API.saveBook(book)
@@ -40,13 +83,6 @@ class Books extends Component {
       })
       .catch((err) => console.log(err));
   };
-
-//   handleInputChange = (event) => {
-//     const { name, value } = {topic};
-//     this.setState({
-//       [name]: value,
-//     });
-//   };
 
   handleFormSubmit = (event) => {
     // event.preventDefault();
@@ -77,6 +113,7 @@ class Books extends Component {
                       <div className="save-btn">
                         <BookSaveBtn
                           key={"" + index + book.id}
+                          id={book.id}
                           btntype="info"
                           onClick={() =>
                             this.saveBook({
@@ -116,14 +153,17 @@ class Books extends Component {
   }
 }
 
+
+
 Books.propTypes = {
-    getBooks: PropTypes.func.isRequired,
+    // saveBook: PropTypes.func.isRequired,
     book: PropTypes.object.isRequired
 }
 
 const mapStateToProps = (state) => ({
     book: state.book
+    // book: book
 })
 
-export default connect(mapStateToProps, { getBooks })(Books);
+export default connect(mapStateToProps, { addBook })(Books);
 
