@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import styled from 'styled-components';
 import Video from '../components/VideoPlayer';
 import SaveBtn from './SaveBtn';
+import Books from './Books';
 
 const LinkContainer = styled.div`
     margin-top: 10%;
@@ -109,7 +110,8 @@ const ResultsTabs = ({ topic }) => {
                 <TabPane tabId='3'>
                     <Row>
                         <Col sm='12'>
-                            <h4>Tab 3 Contents</h4>
+                            {/* <h4>Tab 3 Contents</h4> */}
+                            <Books topic={topic} />
                         </Col>
                     </Row>
                 </TabPane>

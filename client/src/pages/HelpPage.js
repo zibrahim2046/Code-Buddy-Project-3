@@ -1,8 +1,6 @@
 import React from 'react';
 // import 'bootstrap/dist/css/bootstrap.css';
 import { UncontrolledButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import { tokenConfig } from '../actions/authActions';
-import { returnErrors } from '../actions/errorActions';
 import { useHistory } from 'react-router-dom';
 import { htmlCss, node, js, react } from '../assets/topics';
 
