@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://zibrahim2046@gmail.com:March201995@Cluster0-vggoa.mongodb.net/codeBuddy?retryWrites=true&w=majority",
+    "jwtSecret": "sl_myJwtSecret"
+}
