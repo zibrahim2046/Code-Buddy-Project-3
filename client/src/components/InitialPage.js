@@ -1,6 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import styled from 'styled-components';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import RegisterModal from '../components/auth/RegisterModal';
@@ -39,12 +37,9 @@ class InitialPage extends Component {
 
         return (
             <div className='App'>
-                {/* <h1>Welcome To Code Buddy</h1> */}
+               
                 { isAuthenticated ? authLinks : guestLinks }
-                {/* <p>Please Sign In or Register To Continue</p> */}
-                {/* <LoginModal buttonLabel='Login' style={{ marginTop: 100 }} />
-                <RegisterModal buttonLabel='New User?' style={{ marginTop: 100 }} /> */}
-                {/* <Authentication buttonLabel='New User?' style={{ marginTop: 100 }} /> */}
+                
             </div>
         );
     }

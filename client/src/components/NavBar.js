@@ -3,8 +3,6 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } f
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-
-import LoginModal from '../components/auth/LoginModal';
 import Logout from './auth/Logout';
 
 const NavContainer = styled.div`
@@ -13,43 +11,6 @@ const NavContainer = styled.div`
     right: 0;
 `;
 
-// const NavBar = (props) => {
-//     const [collapsed, setCollapsed] = useState(true);
-
-//     const toggleNavbar = () => setCollapsed(!collapsed);
-
-//     return (
-//         <NavContainer>
-//             <Navbar color='faded' light>
-//                 <NavbarToggler onClick={toggleNavbar} className='mr-2' />
-//                 <NavbarBrand href='' className='mr-auto'>
-//                     Code Buddy
-//                 </NavbarBrand>
-
-//                 <Collapse isOpen={!collapsed} navbar>
-//                     <Nav navbar>
-//                         <NavItem>
-//                             <NavLink href='/help'>Home</NavLink>
-//                         </NavItem>
-//                         <NavItem>
-//                             <NavLink href='/results'>Content</NavLink>
-//                         </NavItem>
-//                         <NavItem>
-//                             <NavLink href='https://github.com/zibrahim2046/Code-Buddy-Project-3'>Github</NavLink>
-//                         </NavItem>
-//                         <NavItem>
-//                             <Logout />
-//                         </NavItem>
-//                     </Nav>
-//                 </Collapse>
-//             </Navbar>
-//         </NavContainer>
-//     );
-// };
-
-// const [collapsed, setCollapsed] = useState(true);
-
-// const toggleNavbar = () => setCollapsed(!collapsed);
 
 class NavBar extends Component {
     state = {

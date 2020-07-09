@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
-import Video from '../components/VideoPlayer'
+
 
 
 class SaveBtn extends Component {

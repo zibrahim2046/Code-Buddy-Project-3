@@ -1,12 +1,9 @@
-import React, { useEffect, Component } from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
 import store from './store';
 import { loadUser } from './actions/authActions';
-// import NavBar from './components/NavBar'
-
-// import './App.css';
 
 //Pages
 import MainPage from './pages/Index';
@@ -16,6 +13,8 @@ import Results from './pages/Results';
 import SavedPage from './pages/Saved';
 
 import Layout from './layout/Layout';
+
+
 
 class App extends Component {
     componentDidMount() {

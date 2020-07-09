@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { Button } from "reactstrap";
-import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { connect } from "react-redux";
@@ -14,14 +12,6 @@ class Saved extends Component {
   componentDidMount() {
     this.props.getBooks();
   }  
-
-  // loadBooks = () => {
-  //   API.getBooks()
-  //     .then((res) =>
-  //       this.setState({ books: res.data })
-  //     )
-  //     .catch((err) => console.log(err));
-  // };
 
   onDeleteClick = (id) => {
       this.props.deleteBook(id);

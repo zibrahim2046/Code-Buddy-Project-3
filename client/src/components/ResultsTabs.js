@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Button, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 import styled from 'styled-components';
 import Video from '../components/VideoPlayer';
@@ -11,10 +11,6 @@ const LinkContainer = styled.div`
     display: flex;
     flex-direction: column;
     font-size: 150%;
-`;
-const VideoContainer = styled.div`
-    display: flex;
-    flex-direction: row;
 `;
 
 const TabContainer = styled.div`
