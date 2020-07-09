@@ -14,7 +14,12 @@ class Books extends Component {
     books: [],
     savedBooks: [],
     search: "",
-    book: []  
+    book: [],
+    title: '',
+    author: '',
+    synopsis: '',
+    link: ''
+
   };
 
   componentDidMount() {
@@ -54,35 +59,36 @@ class Books extends Component {
 //       .catch((err) => console.log(err));
 //   };
 
-//   saveBook = (book) => {
-//     console.log('book' + JSON.stringify(book))
-//     console.log('title ' + book.title)
-//     // this.setState({ savedBooks: book })
-//     // console.log('savedBooks ' + savedBooks)
-
-//          const newBook = {
-            
-//              title: book.title,
-//              author: book.author,
-//              synopsis: book.synopsis,
-//              link: book.link,
-//          }
-//         this.props.addBook(newBook);
-//     //   })
-//     //   .catch((err) => console.log(err));
-//   };
-
   saveBook = (book) => {
-    API.saveBook(book)
-      .then((res) => {
-        const currentBook = this.state.books;
-        const bookSave = currentBook.filter((book) => book.id !== res.data.id);
-        this.setState({
-          savedBooks: bookSave,
-        });
-      })
-      .catch((err) => console.log(err));
+
+    // this.setState({ savedBooks: book })
+    // console.log('savedBooks ' + savedBooks)
+
+         const newBook = {
+            
+             title: book.title,
+             author: book.author,
+             synopsis: book.synopsis,
+             link: book.link,
+         }
+
+        //  console.log('newBook ' + JSON.stringify(newBook))
+        this.props.addBook(newBook);
+    //   })
+    //   .catch((err) => console.log(err));
   };
+
+//   saveBook = (book) => {
+//     API.saveBook(book)
+//       .then((res) => {
+//         const currentBook = this.state.books;
+//         const bookSave = currentBook.filter((book) => book.id !== res.data.id);
+//         this.setState({
+//           savedBooks: bookSave,
+//         });
+//       })
+//       .catch((err) => console.log(err));
+//   };
 
   handleFormSubmit = (event) => {
     // event.preventDefault();
@@ -92,6 +98,8 @@ class Books extends Component {
   render() {
     return (
       <Container fluid>
+        <br />
+        <br />
         {this.state.books.length ? (
           <List>
             {this.state.books.map((book, index) => (
@@ -155,10 +163,10 @@ class Books extends Component {
 
 
 
-Books.propTypes = {
-    // saveBook: PropTypes.func.isRequired,
-    book: PropTypes.object.isRequired
-}
+// Books.propTypes = {
+//     // saveBook: PropTypes.func.isRequired,
+//     book: PropTypes.object.isRequired
+// }
 
 const mapStateToProps = (state) => ({
     book: state.book

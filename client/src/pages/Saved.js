@@ -15,27 +15,28 @@ class Saved extends Component {
     this.props.getBooks();
   }  
 
-  loadBooks = () => {
-    API.getBooks()
-      .then((res) =>
-        this.setState({ books: res.data })
-      )
-      .catch((err) => console.log(err));
-  };
+  // loadBooks = () => {
+  //   API.getBooks()
+  //     .then((res) =>
+  //       this.setState({ books: res.data })
+  //     )
+  //     .catch((err) => console.log(err));
+  // };
 
   onDeleteClick = (id) => {
-      this.props.deleteItem(id);
+      this.props.deleteBook(id);
   }
 
   render() {
     const { books } = this.props.book;
+   
     return (
       <Container fluid>
         <h2>Saved Books</h2>
-        {this.state.books.length ? (
-        //   <h2>Saved Books</h2>
+        <br />
+        {books.length ? (
           <List>
-            {this.state.books.map(book => (
+            {books.map(book => (
               <ListItem key={book._id}>
                 <div className="googlebooks">
                   <Row>
@@ -43,12 +44,12 @@ class Saved extends Component {
                       <a key={book._id + book.id} 
                         href={book.link}
                       >
-                        <strong>{book.title}</strong>
+                        <h3>{book.title}</h3>
                       </a>
-                      <p>
+                      {/* <p>
                         Written by:{" "}
                         {book.author.join(", ")}
-                      </p>
+                      </p> */}
                     </Col>
                     <Col size="md-2">
                       <div className="delete-btn">
@@ -58,17 +59,18 @@ class Saved extends Component {
                         size="small"
                         onClick={this.onDeleteClick.bind(this, book._id)}
                         >
+                          Delete
                         </Button>
                       </div>
                     </Col>
                   </Row>
                   <p>
-                    <img
+                    {/* <img
                       align="left"
                       style={{ paddingRight: 10 }}
                       src={book.thumbnail}
                       alt="Book"
-                    />
+                    /> */}
                     {book.synopsis}
                   </p>
                 </div>

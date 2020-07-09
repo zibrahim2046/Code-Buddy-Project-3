@@ -17,9 +17,30 @@ export const getBooks = () => (dispatch, getState) => {
     
 };
 
-export const addBook = (book) => (dispatch, getState) => {
+// export const addBook = (book) => (dispatch, getState) => {
+//     axios   
+//         .post('/api/books', book, tokenConfig(getState))
+//         .then(res => 
+//             dispatch({
+//                 type: ADD_BOOK,
+//                 payload: res.data
+//             })
+//         ).catch(err => dispatch(returnErrors(err.response.data, err.response.status)));
+// };
+
+export const addBook = ({ title, author, synopsis, link }) => (dispatch, getState) => {
+    // const config = {
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     }
+    // }
+
+    // Request body
+    const body = JSON.stringify({ title, author, synopsis, link });
+    
+    
     axios   
-        .post('/api/books', book, tokenConfig(getState))
+        .post('/api/books', body, tokenConfig(getState))
         .then(res => 
             dispatch({
                 type: ADD_BOOK,
@@ -37,7 +58,7 @@ export const deleteBook = (id) => (dispatch, getState) => {
                 payload: id
             })
         ).catch(err => dispatch(returnErrors(err.response.data, err.response.status)));
-};
+    };
 
 export const setBooksLoading = () => {
     return {

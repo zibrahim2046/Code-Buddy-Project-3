@@ -4,12 +4,13 @@ const router = require("express").Router();
 const booksController = require("../../controllers/booksController");
 const Book = require("../../models/book");
 const auth = require("../../middleware/auth");
+const db = require("../../models");
 
 
 // Matches with "/api/books"
 // router.route("/")
-//   .get(booksController.findAll)
-//   .post(booksController.create);
+// //   .get(booksController.findAll)
+//   .post(auth, booksController.create);
 
 // // Matches with "/api/books/:id"
 // router
@@ -33,12 +34,16 @@ router.get('/', auth, (req, res) => {
 // @route POST api/books
 // @desc Create a book
 // @access Private
-router.post('/', auth, (req, res) => {
-  const newBook = new Book({
-    book: req.body
-  });
+// router.post('/', auth, (req, res) => {
+//   const newBook = new Book({
+//     book: req.body
+//   });
 
-  newBook.save().then(book => res.json(book))
+router.post('/', auth, (req, res) => {
+  db.Book
+      .create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
 })
 
 // @route DELETE api/books/:id
