@@ -19,7 +19,7 @@ app.use(routes);
 
 const db = config.get('mongoURI');
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://cshanebrown78:A!rplane1@cluster0-vggoa.mongodb.net/codeBuddy?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password@ds117605.mlab.com:17605/heroku_c1hpwnmn", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
