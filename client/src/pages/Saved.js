@@ -40,7 +40,7 @@ class Saved extends Component {
               <ListItem key={book._id}>
                 <div className="googlebooks">
                   <Row>
-                    <Col size="md-10">
+                    <Col size="md-12">
                       <a key={book._id + book.id} 
                         href={book.link}
                       >
@@ -51,18 +51,18 @@ class Saved extends Component {
                         {book.author.join(", ")}
                       </p> */}
                     </Col>
-                    <Col size="md-2">
-                      <div className="delete-btn">
-                        <Button
+                    {/* <Col size="md-2"> */}
+                      {/* <div className="delete-btn"> */}
+                        {/* <Button
                         className="remove-btn"
                         color="danger"
                         size="small"
                         onClick={this.onDeleteClick.bind(this, book._id)}
                         >
                           Delete
-                        </Button>
-                      </div>
-                    </Col>
+                        </Button> */}
+                      {/* </div> */}
+                    {/* </Col> */}
                   </Row>
                   <p>
                     {/* <img
