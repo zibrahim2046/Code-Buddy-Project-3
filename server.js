@@ -17,9 +17,11 @@ if (process.env.NODE_ENV === 'production') {
 
 app.use(routes);
 
-const db = config.get('mongoURI');
+// const db = config.get('mongoURI');
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password@ds117605.mlab.com:17605/heroku_c1hpwnmn", {
+const db = "mongodb://<dbuser>:<dbpassword>@ds117605.mlab.com:17605/heroku_c1hpwnmn"
+
+mongoose.connect(process.env.MONGODB_URI || db, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
